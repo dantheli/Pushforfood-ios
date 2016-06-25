@@ -29,3 +29,20 @@ extension UINavigationController {
         navigationBar.barStyle = .Black
     }
 }
+
+extension UIView {
+    func fadeShow() {
+        self.hidden = false
+        UIView.animateWithDuration(0.35) {
+            self.alpha = 1.0
+        }
+    }
+    
+    func fadeHide() {
+        UIView.animateWithDuration(0.35, animations: {
+            self.alpha = 0.0
+        }) { Void in
+            self.hidden = true
+        }
+    }
+}

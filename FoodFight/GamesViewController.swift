@@ -19,11 +19,12 @@ class GamesViewController: UIViewController {
         navigationItem.titleView = UIImageView(image: UIImage(named: "banner"))
         
         setupTableView()
+        
+    presentViewController(storyboard!.instantiateViewControllerWithIdentifier("OnboardingViewController"), animated: true, completion: nil)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-        
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
     }
     
     func setupTableView() {
