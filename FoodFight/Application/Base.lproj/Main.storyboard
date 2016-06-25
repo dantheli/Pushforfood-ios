@@ -303,7 +303,7 @@
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LW-TY-wSY">
                                         <rect key="frame" x="214" y="355" width="97.5" height="97.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Button" image="salads"/>
+                                        <state key="normal" title="Button" image="sushi"/>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgt-75-0FF">
                                         <rect key="frame" x="8" y="355" width="97.5" height="97.5"/>
@@ -1013,7 +1013,7 @@
         <image name="mexican" width="240" height="240"/>
         <image name="noodles" width="240" height="240"/>
         <image name="restaurant" width="1140" height="680"/>
-        <image name="salads" width="240" height="240"/>
+        <image name="sushi" width="240" height="240"/>
         <image name="transparent_logo" width="34" height="32"/>
         <image name="x" width="64" height="64"/>
     </resources>
