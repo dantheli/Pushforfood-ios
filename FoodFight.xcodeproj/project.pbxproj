@@ -20,12 +20,14 @@
 		65858EAB1D1E238E00C6460F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65858EA91D1E238E00C6460F /* UserCell.swift */; };
 		65858EAC1D1E238E00C6460F /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65858EAA1D1E238E00C6460F /* UserCell.xib */; };
 		BEA531096928CB2F3EAE0163 /* Pods_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194F09D3AAF76AD51B22D1D4 /* Pods_Food.framework */; };
+		EA2B5C86387DFC7CD2C24921 /* Pods_FoodFight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F697996F421B2A325636472 /* Pods_FoodFight.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		143B0DFEC5B3C0FC4899E488 /* Pods-Food.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food/Pods-Food.release.xcconfig"; sourceTree = "<group>"; };
 		194F09D3AAF76AD51B22D1D4 /* Pods_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65858E891D1E042900C6460F /* Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4811B26E6FFA13913933A8 /* Pods-FoodFight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodFight/Pods-FoodFight.debug.xcconfig"; sourceTree = "<group>"; };
+		65858E891D1E042900C6460F /* FoodFight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodFight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65858E8C1D1E042900C6460F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65858E8E1D1E042900C6460F /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		65858E911D1E042900C6460F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,7 +41,10 @@
 		65858EA71D1E22C700C6460F /* Sockets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sockets.swift; sourceTree = "<group>"; };
 		65858EA91D1E238E00C6460F /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		65858EAA1D1E238E00C6460F /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		65858EB11D1E2A6200C6460F /* FoodFight-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodFight-Bridging-Header.h"; sourceTree = "<group>"; };
+		9F697996F421B2A325636472 /* Pods_FoodFight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD6B060A9FFFE8903709538A /* Pods-Food.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food/Pods-Food.debug.xcconfig"; sourceTree = "<group>"; };
+		D743822E349A86CE20616996 /* Pods-FoodFight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFight.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodFight/Pods-FoodFight.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA531096928CB2F3EAE0163 /* Pods_Food.framework in Frameworks */,
+				EA2B5C86387DFC7CD2C24921 /* Pods_FoodFight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				194F09D3AAF76AD51B22D1D4 /* Pods_Food.framework */,
+				9F697996F421B2A325636472 /* Pods_FoodFight.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -65,32 +72,32 @@
 		65858E801D1E042900C6460F = {
 			isa = PBXGroup;
 			children = (
-				65858E8B1D1E042900C6460F /* Food */,
-				65858E8A1D1E042900C6460F /* Products */,
-				7E1E1F469A12DDB913402983 /* Pods */,
+				65858E8B1D1E042900C6460F /* FoodFight */,
 				3E53C6C10B13560025AFA8B7 /* Frameworks */,
+				7E1E1F469A12DDB913402983 /* Pods */,
+				65858E8A1D1E042900C6460F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 		65858E8A1D1E042900C6460F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				65858E891D1E042900C6460F /* Food.app */,
+				65858E891D1E042900C6460F /* FoodFight.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		65858E8B1D1E042900C6460F /* Food */ = {
+		65858E8B1D1E042900C6460F /* FoodFight */ = {
 			isa = PBXGroup;
 			children = (
 				65858EAD1D1E267E00C6460F /* Application */,
-				65858EAE1D1E268900C6460F /* Login */,
 				65858EB01D1E284500C6460F /* Contacts View */,
-				65858EA21D1E214B00C6460F /* GameViewController.swift */,
+				65858EAE1D1E268900C6460F /* Login */,
 				65858EA41D1E227400C6460F /* Model */,
 				65858EAF1D1E268E00C6460F /* Networking */,
+				65858EA21D1E214B00C6460F /* GameViewController.swift */,
 			);
-			path = Food;
+			path = FoodFight;
 			sourceTree = "<group>";
 		};
 		65858EA41D1E227400C6460F /* Model */ = {
@@ -98,19 +105,20 @@
 			children = (
 				65858EA51D1E228D00C6460F /* User.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		65858EAD1D1E267E00C6460F /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				65858E8C1D1E042900C6460F /* AppDelegate.swift */,
-				65858E901D1E042900C6460F /* Main.storyboard */,
 				65858E931D1E042900C6460F /* Assets.xcassets */,
-				65858E951D1E042900C6460F /* LaunchScreen.storyboard */,
+				65858EB11D1E2A6200C6460F /* FoodFight-Bridging-Header.h */,
 				65858E981D1E042900C6460F /* Info.plist */,
+				65858E951D1E042900C6460F /* LaunchScreen.storyboard */,
+				65858E901D1E042900C6460F /* Main.storyboard */,
 			);
-			name = Application;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		65858EAE1D1E268900C6460F /* Login */ = {
@@ -118,7 +126,7 @@
 			children = (
 				65858EA01D1E211500C6460F /* LoginViewController.swift */,
 			);
-			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		65858EAF1D1E268E00C6460F /* Networking */ = {
@@ -127,7 +135,7 @@
 				65858E9E1D1E1CA000C6460F /* Network.swift */,
 				65858EA71D1E22C700C6460F /* Sockets.swift */,
 			);
-			name = Networking;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		65858EB01D1E284500C6460F /* Contacts View */ = {
@@ -137,7 +145,7 @@
 				65858EA91D1E238E00C6460F /* UserCell.swift */,
 				65858EAA1D1E238E00C6460F /* UserCell.xib */,
 			);
-			name = "Contacts View";
+			path = "Contacts View";
 			sourceTree = "<group>";
 		};
 		7E1E1F469A12DDB913402983 /* Pods */ = {
@@ -145,6 +153,8 @@
 			children = (
 				BD6B060A9FFFE8903709538A /* Pods-Food.debug.xcconfig */,
 				143B0DFEC5B3C0FC4899E488 /* Pods-Food.release.xcconfig */,
+				3A4811B26E6FFA13913933A8 /* Pods-FoodFight.debug.xcconfig */,
+				D743822E349A86CE20616996 /* Pods-FoodFight.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -152,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		65858E881D1E042900C6460F /* Food */ = {
+		65858E881D1E042900C6460F /* FoodFight */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65858E9B1D1E042900C6460F /* Build configuration list for PBXNativeTarget "Food" */;
+			buildConfigurationList = 65858E9B1D1E042900C6460F /* Build configuration list for PBXNativeTarget "FoodFight" */;
 			buildPhases = (
 				079B35CCC406802855E3D077 /* [CP] Check Pods Manifest.lock */,
 				65858E851D1E042900C6460F /* Sources */,
@@ -167,9 +177,9 @@
 			);
 			dependencies = (
 			);
-			name = Food;
+			name = FoodFight;
 			productName = Food;
-			productReference = 65858E891D1E042900C6460F /* Food.app */;
+			productReference = 65858E891D1E042900C6460F /* FoodFight.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -186,6 +196,9 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = RNCTC44528;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -193,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 65858E841D1E042900C6460F /* Build configuration list for PBXProject "Food" */;
+			buildConfigurationList = 65858E841D1E042900C6460F /* Build configuration list for PBXProject "FoodFight" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -206,7 +219,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				65858E881D1E042900C6460F /* Food */,
+				65858E881D1E042900C6460F /* FoodFight */,
 			);
 		};
 /* End PBXProject section */
@@ -253,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Food/Pods-Food-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodFight/Pods-FoodFight-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B8EF3C6F8368C5896C4D20C3 /* [CP] Embed Pods Frameworks */ = {
@@ -268,7 +281,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Food/Pods-Food-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodFight/Pods-FoodFight-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -298,6 +311,7 @@
 				65858E911D1E042900C6460F /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		65858E951D1E042900C6460F /* LaunchScreen.storyboard */ = {
@@ -306,6 +320,7 @@
 				65858E961D1E042900C6460F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -396,24 +411,24 @@
 		};
 		65858E9C1D1E042900C6460F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD6B060A9FFFE8903709538A /* Pods-Food.debug.xcconfig */;
+			baseConfigurationReference = 3A4811B26E6FFA13913933A8 /* Pods-FoodFight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Food/Info.plist;
+				INFOPLIST_FILE = FoodFight/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MEDJI.Food;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MEDJI.FoodFight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		65858E9D1D1E042900C6460F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 143B0DFEC5B3C0FC4899E488 /* Pods-Food.release.xcconfig */;
+			baseConfigurationReference = D743822E349A86CE20616996 /* Pods-FoodFight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Food/Info.plist;
+				INFOPLIST_FILE = FoodFight/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MEDJI.Food;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MEDJI.FoodFight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -421,7 +436,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		65858E841D1E042900C6460F /* Build configuration list for PBXProject "Food" */ = {
+		65858E841D1E042900C6460F /* Build configuration list for PBXProject "FoodFight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65858E991D1E042900C6460F /* Debug */,
@@ -430,7 +445,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65858E9B1D1E042900C6460F /* Build configuration list for PBXNativeTarget "Food" */ = {
+		65858E9B1D1E042900C6460F /* Build configuration list for PBXNativeTarget "FoodFight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				65858E9C1D1E042900C6460F /* Debug */,
