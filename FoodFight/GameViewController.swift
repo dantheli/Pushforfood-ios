@@ -16,12 +16,17 @@ class GameViewController: UIViewController {
     
     var socket: SocketIOClient!
     var timer: NSTimer!
-    var countDown = 15 {
+    var countDown = 3 {
         didSet {
             countDownLabel.text = "\(countDown)"
             if countDown == 0 {
-                Network.play()
-                navigationController?.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("PostGameViewController"), animated: true)
+                Network.play { restaurant in
+                    if let restaurant = restaurant {
+                        let vc = self.storyboard!.instantiateViewControllerWithIdentifier("PostGameViewController") as! PostGameViewController
+                        vc.restaurant = restaurant
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
             }
         }
     }

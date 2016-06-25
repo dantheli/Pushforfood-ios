@@ -122,7 +122,6 @@
         <!--Contacts View Controller-->
         <scene sceneID="7Dh-ud-QLV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IY0-9z-kKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ContactsViewController" id="vPc-Gt-emI" customClass="ContactsViewController" customModule="FoodFight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q86-H0-Ra1"/>
@@ -244,6 +243,7 @@
                         <outlet property="thirdField" destination="DIN-su-76z" id="D93-jR-jpG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IY0-9z-kKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="954" y="303"/>
         </scene>

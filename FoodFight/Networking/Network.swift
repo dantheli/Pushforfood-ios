@@ -102,14 +102,16 @@ class Network {
                 ["name" : "dan"]
             ],
             "choices" : [
-                ["chinese" : 0.6],
-                ["indian" : 0.05],
-                ["ice cream" : 0.1],
-                ["fast food" : 0.25]
+                "chinese" : 0.6,
+                "indian" : 0.05,
+                "ice cream" : 0.1,
+                "fast food" : 0.25
             ]
         ]
         request(.POST, params: parameters, router: .Play) { data, error in
-            completion(restaurant: data?["hi"])
+            var restaurant: Restaurant? = nil
+            restaurant = Restaurant(json: data!["suggestions"].arrayValue.first!)
+            completion(restaurant: restaurant)
         }
     }
     

@@ -19,10 +19,13 @@ class PostGameViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
+    var restaurant: Restaurant!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         played = true
+        updateInfo(restaurant.name, cuisine: restaurant.cuisine, address: restaurant.address, phone: "(837) 234-2398", imageURL: "")
     }
     
     func updateInfo(name: String, cuisine: String, address: String, phone: String, imageURL: String) {
@@ -30,9 +33,5 @@ class PostGameViewController: UIViewController {
         cuisineLabel.text = cuisine
         addressLabel.text = address
         phoneLabel.text = phone
-        if let url = NSURL(string: imageURL),
-            let data = NSData(contentsOfURL: url) {
-            imageView.image = UIImage(data: data)
-        }
     }
 }
