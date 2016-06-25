@@ -15,7 +15,7 @@ class ContactsViewController: UIViewController {
     
     @IBOutlet weak var createButton: UIButton!
     @IBAction func createButtonPressed(sender: UIButton) {
-        navigationController?.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("GameViewController"), animated: true)
+        navigationController?.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("PrepareGameViewController"), animated: true)
     }
     @IBOutlet weak var firstField: HoshiTextField!
     @IBOutlet weak var secondField: HoshiTextField!
@@ -34,7 +34,10 @@ class ContactsViewController: UIViewController {
         
         navigationController?.setTheme()
         
-        title = "FoodFight"
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+        navigationItem.titleView = UIImageView(image: UIImage(named: "banner"))
         
         setupData()
         

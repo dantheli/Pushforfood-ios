@@ -18,6 +18,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         emailField.delegate = self
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
     func login() {
         // Login logic
         Network.signIn(emailField.text ?? "") { error in

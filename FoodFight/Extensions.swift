@@ -27,6 +27,5 @@ extension UINavigationController {
         navigationBar.barTintColor = UIColor.foodOrange()
         navigationBar.tintColor = UIColor.whiteColor()
         navigationBar.barStyle = .Black
-        navigationItem.titleView = UIImageView(image: UIImage(named: "banner"))
     }
 }

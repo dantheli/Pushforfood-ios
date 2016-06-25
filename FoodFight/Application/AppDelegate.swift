@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         self.storyboard = storyboard
         
+        UITabBar.appearance().tintColor = UIColor.foodOrange()
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(userSignedIn), name: "UserSignedIn", object: nil)
         
         return true
@@ -51,7 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func presentMainView() {
-        window?.rootViewController = UINavigationController(rootViewController: storyboard!.instantiateViewControllerWithIdentifier("ContactsViewController"))
+        let tabbarController = storyboard?.instantiateViewControllerWithIdentifier("TabBarController")
+        window?.rootViewController = tabbarController
     }
 
     func applicationWillResignActive(application: UIApplication) {
