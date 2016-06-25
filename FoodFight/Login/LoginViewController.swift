@@ -10,12 +10,27 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var nameField: UITextField!
+    @IBAction func nameField(sender: UITextField) {
+        updateButton()
+    }
     @IBOutlet weak var emailField: UITextField!
+    @IBAction func emailField(sender: UITextField) {
+        updateButton()
+    }
+    
+    @IBOutlet weak var signIn: UIButton!
+    @IBAction func signInButtonPressed(sender: UIButton) {
+        login()
+    }
+    
+    func updateButton() {
+        signIn.enabled = !(nameField.text?.isEmpty ?? true) && !(emailField.text?.isEmpty ?? true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        emailField.delegate = self
+        signIn.enabled = false
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -31,10 +46,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 NSNotificationCenter.defaultCenter().postNotificationName("UserSignedIn", object: nil)
             }
         }
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        login()
-        return true
     }
 }

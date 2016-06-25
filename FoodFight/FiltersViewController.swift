@@ -13,19 +13,39 @@ class FiltersViewController: UIViewController {
 
     @IBOutlet weak var firstField: HoshiTextField!
     @IBAction func firstFieldChanged(sender: HoshiTextField) {
-        tableView.frame = CGRect(x: sender.frame.origin.x, y: sender.frame.maxY, width: sender.frame.width, height: sender.frame.height)
-        currentResponder = .First
+        view.bringSubviewToFront(tableView)
+        view.bringSubviewToFront(firstField)
+        if sender.text?.isEmpty ?? true {
+            tableView.fadeHide()
+            currentResponder = .None
+        } else {
+            tableView.fadeShow()
+            tableView.frame = CGRect(x: sender.frame.origin.x, y: sender.frame.maxY - 4.0, width: sender.frame.width, height: 220.0)
+            currentResponder = .First
+        }
     }
     @IBOutlet weak var secondField: HoshiTextField!
     @IBAction func secondFieldChanged(sender: HoshiTextField) {
-        tableView.frame = CGRect(x: sender.frame.origin.x, y: sender.frame.maxY, width: sender.frame.width, height: sender.frame.height)
-        currentResponder = .Second
+        view.bringSubviewToFront(tableView)
+        view.bringSubviewToFront(secondField)
+        if sender.text?.isEmpty ?? true {
+            tableView.fadeHide()
+            currentResponder = .None
+        } else {
+            tableView.fadeShow()
+            tableView.frame = CGRect(x: sender.frame.origin.x, y: sender.frame.maxY - 4.0, width: sender.frame.width, height: 220.0)
+            currentResponder = .Second
+        }
+    }
+    
+    @IBOutlet weak var goButton: UIButton!
+    @IBAction func goButtonPressed(sender: UIButton) {
+        navigationController?.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("PrepareGameViewController"), animated: true)
     }
     
     
-    
     var tableView: UITableView!
-    var results: [String] = ["Food", "Japanese"]
+    var results: [String] = ["Jamaican", "Japanese", "Jack's Burgers"]
     
     enum Responder {
         case None
@@ -38,8 +58,14 @@ class FiltersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.setTheme()
+        
         firstField.delegate = self
         secondField.delegate = self
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
         
         setupTableView()
     }
@@ -54,6 +80,14 @@ class FiltersViewController: UIViewController {
         tableView.alpha = 0.0
         
         tableView.backgroundColor = UIColor(white: 1.0, alpha: 0.7)
+        
+        tableView.contentInset = UIEdgeInsets(top: 8.0, left: 0.0, bottom: 0.0, right: 0.0)
+        tableView.tableFooterView = UIView()
+        tableView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        tableView.layer.cornerRadius = 4.0
+        tableView.layer.borderWidth = 0.5
+        
+        tableView.separatorInset = UIEdgeInsetsZero
         
         view.addSubview(tableView)
     }
@@ -72,6 +106,7 @@ extension FiltersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ResultCell", forIndexPath: indexPath)
         cell.textLabel?.text = results[indexPath.row]
+        cell.textLabel?.textColor = UIColor.foodOrange()
         return cell
     }
     

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var alreadyOnboarded = false
+
 class GamesViewController: UIViewController {
 
     var tableView: UITableView!
@@ -16,11 +18,12 @@ class GamesViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.setTheme()
-        navigationItem.titleView = UIImageView(image: UIImage(named: "banner"))
         
         setupTableView()
-        
-    presentViewController(storyboard!.instantiateViewControllerWithIdentifier("OnboardingViewController"), animated: true, completion: nil)
+        if !alreadyOnboarded {
+            presentViewController(storyboard!.instantiateViewControllerWithIdentifier("OnboardingViewController"), animated: true, completion: nil)
+            alreadyOnboarded = true
+        }
     }
     
     override func viewDidAppear(animated: Bool) {

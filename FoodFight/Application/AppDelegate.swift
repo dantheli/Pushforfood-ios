@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.foodOrange()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(userSignedIn), name: "UserSignedIn", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(presentMainView), name: "MainMenu", object: nil)
         
         return true
     }

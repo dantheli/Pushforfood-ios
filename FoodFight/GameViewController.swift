@@ -18,8 +18,16 @@ class GameViewController: UIViewController {
         
         for button in buttons {
             button.addTarget(self, action: #selector(buttonPressed(_:)), forControlEvents: .TouchDown)
+            button.adjustsImageWhenHighlighted = false
         }
         
+        let quitItem = UIBarButtonItem(title: "Quit", style: .Done, target: self, action: #selector(quitButtonPressed))
+        navigationItem.leftBarButtonItem = quitItem
+        
+    }
+    
+    func quitButtonPressed() {
+        NSNotificationCenter.defaultCenter().postNotificationName("MainMenu", object: nil)
     }
     
     func buttonPressed(button: UIButton) {

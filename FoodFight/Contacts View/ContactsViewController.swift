@@ -15,7 +15,7 @@ class ContactsViewController: UIViewController {
     
     @IBOutlet weak var createButton: UIButton!
     @IBAction func createButtonPressed(sender: UIButton) {
-        navigationController?.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("PrepareGameViewController"), animated: true)
+        presentViewController(UINavigationController(rootViewController: storyboard!.instantiateViewControllerWithIdentifier("FiltersViewController")), animated: true, completion: nil)
     }
     
     @IBOutlet weak var firstField: HoshiTextField!

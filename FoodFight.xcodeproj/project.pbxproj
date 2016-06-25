@@ -51,7 +51,7 @@
 		65FCDFEC1D1E651400BF9AC8 /* PrepareGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareGameViewController.swift; sourceTree = "<group>"; };
 		65FCDFEF1D1EB79A00BF9AC8 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		65FCDFF11D1EBBBB00BF9AC8 /* PostGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostGameViewController.swift; sourceTree = "<group>"; };
-		65FCDFF31D1EBC0500BF9AC8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		65FCDFF31D1EBC0500BF9AC8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = ../OnboardingViewController.swift; sourceTree = "<group>"; };
 		65FCDFF51D1EDA4B00BF9AC8 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		9F697996F421B2A325636472 /* Pods_FoodFight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D743822E349A86CE20616996 /* Pods-FoodFight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFight.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodFight/Pods-FoodFight.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				65858EA01D1E211500C6460F /* LoginViewController.swift */,
+				65FCDFF31D1EBC0500BF9AC8 /* OnboardingViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -181,7 +182,6 @@
 		65FCDFEE1D1EB78C00BF9AC8 /* Games */ = {
 			isa = PBXGroup;
 			children = (
-				65FCDFF31D1EBC0500BF9AC8 /* OnboardingViewController.swift */,
 				65FCDFEF1D1EB79A00BF9AC8 /* GamesViewController.swift */,
 			);
 			name = Games;

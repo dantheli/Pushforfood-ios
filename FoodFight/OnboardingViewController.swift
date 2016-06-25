@@ -30,14 +30,14 @@ class OnboardingViewController: UIViewController {
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
-        crossButton.layer.backgroundColor = UIColor(white: 1.0, alpha: 0.5).CGColor
+        crossButton.layer.backgroundColor = UIColor.whiteColor().CGColor
         crossButton.imageView?.contentMode = .ScaleAspectFit
         crossButton.imageEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         crossButton.layer.cornerRadius = 8.0
         crossButton.setImage(UIImage(named: "x")?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
         crossButton.imageView?.tintColor = UIColor.redColor()
         
-        checkButton.layer.backgroundColor = UIColor(white: 1.0, alpha: 0.5).CGColor
+        checkButton.layer.backgroundColor = UIColor.whiteColor().CGColor
         checkButton.imageView?.contentMode = .ScaleAspectFit
         checkButton.imageEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         checkButton.layer.cornerRadius = 8.0
