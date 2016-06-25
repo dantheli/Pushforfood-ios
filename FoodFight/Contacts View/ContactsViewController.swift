@@ -12,7 +12,15 @@ import TextFieldEffects
 class ContactsViewController: UIViewController {
 
     var infoLabel: UILabel!
-    var tableView: UITableView!
+    
+    @IBOutlet weak var createButton: UIButton!
+    @IBAction func createButtonPressed(sender: UIButton) {
+        navigationController?.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("GameViewController"), animated: true)
+    }
+    @IBOutlet weak var firstField: HoshiTextField!
+    @IBOutlet weak var secondField: HoshiTextField!
+    @IBOutlet weak var thirdField: HoshiTextField!
+    
     var users: [User] = [
         User(name: "Ilan Filonenko", email: "ilan@ilanfilonenko.com"),
         User(name: "Joe Antonakakis", email: "joe@joeantonakakis.com"),
@@ -33,28 +41,11 @@ class ContactsViewController: UIViewController {
         OneSignal.defaultClient().registerForPushNotifications()
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
     func setupData() {
         
     }
 }
-
-extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("UserCell", forIndexPath: indexPath) as! UserCell
-        
-        let user = users[indexPath.row]
-        
-        cell.nameLabel.text = user.name
-        
-        return cell
-    }
-}
-

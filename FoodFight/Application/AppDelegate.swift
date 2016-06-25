@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func presentMainView() {
-        window?.rootViewController = UINavigationController(rootViewController: ContactsViewController())
+        window?.rootViewController = UINavigationController(rootViewController: storyboard!.instantiateViewControllerWithIdentifier("ContactsViewController"))
     }
 
     func applicationWillResignActive(application: UIApplication) {
