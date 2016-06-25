@@ -3,19 +3,22 @@ PODS:
   - OneSignal (1.13.3)
   - Socket.IO-Client-Swift (6.1.3)
   - SwiftyJSON (2.3.2)
+  - TextFieldEffects (1.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - OneSignal
   - Socket.IO-Client-Swift
   - SwiftyJSON
+  - TextFieldEffects
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   OneSignal: 434facae3389cb0d4d3fc57b9a6cf66db685205e
   Socket.IO-Client-Swift: 00eb528b3eaa0c0385e54b8c6c00e36abc992257
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
 
-PODFILE CHECKSUM: 718ba67caf843b6871d55e3c05a5dc7d1ff4728a
+PODFILE CHECKSUM: 5c46984becae8b04ebd9ed7d992d69db5a18c5ba
 
 COCOAPODS: 1.0.1

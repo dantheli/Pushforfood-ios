@@ -8,5 +8,5 @@ target 'FoodFight' do
   pod 'Alamofire'
   pod 'Socket.IO-Client-Swift'
   pod 'OneSignal'
-
+  pod 'TextFieldEffects'
 end

@@ -7,20 +7,57 @@
 //
 
 import UIKit
-import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var storyboard: UIStoryboard?
 
     var OneSignalAppId = "1511941a-fe53-4854-87ed-62dbfba5ec0e"
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        _ = OneSignal(launchOptions: launchOptions, appId: "b2f7f966-d8cc-11e4-bed1-df8f05be55ba", handleNotification: nil)
+        _ = OneSignal(launchOptions: launchOptions, appId: OneSignalAppId, handleNotification: nil, autoRegister: false)
+        
+        OneSignal.defaultClient().enableInAppAlertNotification(true)
+        
+        OneSignal.defaultClient().IdsAvailable { userId, pushToken in
+            print(userId)
+        }
+        
+        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if SessionCode == nil {
+            window.rootViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController")
+        } else {
+            presentMainView()
+        }
+        
+        window.makeKeyAndVisible()
+        self.window = window
+        self.storyboard = storyboard
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(userSignedIn), name: "UserSignedIn", object: nil)
         
         return true
+    }
+    
+    func userSignedIn() {
+        presentMainView()
+    }
+    
+    func userSignedOut() {
+        presentLogin()
+    }
+    
+    func presentLogin() {
+        window?.rootViewController = storyboard?.instantiateViewControllerWithIdentifier("LoginViewController")
+    }
+    
+    func presentMainView() {
+        window?.rootViewController = UINavigationController(rootViewController: ContactsViewController())
     }
 
     func applicationWillResignActive(application: UIApplication) {

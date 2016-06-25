@@ -51,6 +51,11 @@ var SessionCode: String? {
  */
 class Network {
     
+    static func signIn(username: String, completion: (error: NSError?) -> Void) {
+//        request(.POST, params: [], router: <#T##Router#>, completion: <#T##(data: JSON?, error: NSError?) -> Void#>)
+        completion(error: nil)
+    }
+    
     static func someGetRequest(info: String, completion: (error: NSError?) -> Void) {
         request(.GET, params: [APIKey.Info : info], router: .Endpoint) { data, error in
             if error == nil {

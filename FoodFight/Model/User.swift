@@ -20,4 +20,10 @@ struct User {
         email = ""
         id = ""
     }
+    
+    init(name: String, email: String) {
+        id = NSUUID().UUIDString
+        self.name = name
+        self.email = email
+    }
 }

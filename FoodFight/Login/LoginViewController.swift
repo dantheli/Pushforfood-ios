@@ -20,7 +20,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func login() {
         // Login logic
-        presentViewController(ContactsViewController(), animated: true, completion: nil)
+        Network.signIn(emailField.text ?? "") { error in
+            if let error = error {
+                self.displayError(error, completion: nil)
+            } else {
+                NSNotificationCenter.defaultCenter().postNotificationName("UserSignedIn", object: nil)
+            }
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
