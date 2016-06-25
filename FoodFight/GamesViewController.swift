@@ -18,6 +18,7 @@ class GamesViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.setTheme()
+        navigationItem.titleView = UIImageView(image: UIImage(named: "banner"))
         
         setupTableView()
         if !alreadyOnboarded {

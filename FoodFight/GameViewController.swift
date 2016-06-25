@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import SocketIOClientSwift
 
 class GameViewController: UIViewController {
 
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var buttonsContainer: UIView!
+    
+    var socket: SocketIOClient!
+    
+    func setupSocket() {
+        socket = SocketIOClient(socketURL: NSURL(string: "")!)
+        socket.onAny { event in
+            print("Got socket with event: \(event.event)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +31,7 @@ class GameViewController: UIViewController {
             button.adjustsImageWhenHighlighted = false
         }
         
-        let quitItem = UIBarButtonItem(title: "Quit", style: .Done, target: self, action: #selector(quitButtonPressed))
-        navigationItem.leftBarButtonItem = quitItem
-        
-    }
-    
-    func quitButtonPressed() {
-        NSNotificationCenter.defaultCenter().postNotificationName("MainMenu", object: nil)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func buttonPressed(button: UIButton) {

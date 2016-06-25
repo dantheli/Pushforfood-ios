@@ -40,9 +40,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func login() {
         // Login logic
         Network.signIn(emailField.text ?? "") { error in
-            if let error = error {
-                self.displayError(error, completion: nil)
-            } else {
+            if error == nil {
                 NSNotificationCenter.defaultCenter().postNotificationName("UserSignedIn", object: nil)
             }
         }

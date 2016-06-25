@@ -16,7 +16,6 @@
 		65858EA11D1E211500C6460F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65858EA01D1E211500C6460F /* LoginViewController.swift */; };
 		65858EA31D1E214B00C6460F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65858EA21D1E214B00C6460F /* GameViewController.swift */; };
 		65858EA61D1E228D00C6460F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65858EA51D1E228D00C6460F /* User.swift */; };
-		65858EA81D1E22C700C6460F /* Sockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65858EA71D1E22C700C6460F /* Sockets.swift */; };
 		65858EAB1D1E238E00C6460F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65858EA91D1E238E00C6460F /* UserCell.swift */; };
 		65858EAC1D1E238E00C6460F /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65858EAA1D1E238E00C6460F /* UserCell.xib */; };
 		65FCDFE91D1E2E2400BF9AC8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFE81D1E2E2400BF9AC8 /* Extensions.swift */; };
@@ -26,6 +25,7 @@
 		65FCDFF21D1EBBBB00BF9AC8 /* PostGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFF11D1EBBBB00BF9AC8 /* PostGameViewController.swift */; };
 		65FCDFF41D1EBC0500BF9AC8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFF31D1EBC0500BF9AC8 /* OnboardingViewController.swift */; };
 		65FCDFF61D1EDA4B00BF9AC8 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFF51D1EDA4B00BF9AC8 /* FiltersViewController.swift */; };
+		65FCDFFA1D1EF8C300BF9AC8 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFF91D1EF8C300BF9AC8 /* Restaurant.swift */; };
 		EA2B5C86387DFC7CD2C24921 /* Pods_FoodFight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F697996F421B2A325636472 /* Pods_FoodFight.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,6 @@
 		65858EA01D1E211500C6460F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		65858EA21D1E214B00C6460F /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		65858EA51D1E228D00C6460F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		65858EA71D1E22C700C6460F /* Sockets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sockets.swift; sourceTree = "<group>"; };
 		65858EA91D1E238E00C6460F /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		65858EAA1D1E238E00C6460F /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		65858EB11D1E2A6200C6460F /* FoodFight-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodFight-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		65FCDFF11D1EBBBB00BF9AC8 /* PostGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostGameViewController.swift; sourceTree = "<group>"; };
 		65FCDFF31D1EBC0500BF9AC8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = ../OnboardingViewController.swift; sourceTree = "<group>"; };
 		65FCDFF51D1EDA4B00BF9AC8 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		65FCDFF91D1EF8C300BF9AC8 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		9F697996F421B2A325636472 /* Pods_FoodFight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D743822E349A86CE20616996 /* Pods-FoodFight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFight.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodFight/Pods-FoodFight.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				65858EA51D1E228D00C6460F /* User.swift */,
+				65FCDFF91D1EF8C300BF9AC8 /* Restaurant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				65858E9E1D1E1CA000C6460F /* Network.swift */,
-				65858EA71D1E22C700C6460F /* Sockets.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -332,6 +332,7 @@
 				65FCDFE91D1E2E2400BF9AC8 /* Extensions.swift in Sources */,
 				65FCDFED1D1E651400BF9AC8 /* PrepareGameViewController.swift in Sources */,
 				65858EA31D1E214B00C6460F /* GameViewController.swift in Sources */,
+				65FCDFFA1D1EF8C300BF9AC8 /* Restaurant.swift in Sources */,
 				65FCDFF61D1EDA4B00BF9AC8 /* FiltersViewController.swift in Sources */,
 				65FCDFF01D1EB79A00BF9AC8 /* GamesViewController.swift in Sources */,
 				65858EA11D1E211500C6460F /* LoginViewController.swift in Sources */,
@@ -342,7 +343,6 @@
 				65858E8D1D1E042900C6460F /* AppDelegate.swift in Sources */,
 				65FCDFF41D1EBC0500BF9AC8 /* OnboardingViewController.swift in Sources */,
 				65858E9F1D1E1CA000C6460F /* Network.swift in Sources */,
-				65858EA81D1E22C700C6460F /* Sockets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

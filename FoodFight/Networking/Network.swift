@@ -44,6 +44,8 @@ var SessionCode: String? {
     }
 }
 
+
+
 /**
  
  The NetworkManager class makes HTTP requests to the backend server.
@@ -51,18 +53,11 @@ var SessionCode: String? {
  */
 class Network {
     
-    static func signIn(username: String, completion: (error: NSError?) -> Void) {
-//        request(.POST, params: [], router: <#T##Router#>, completion: <#T##(data: JSON?, error: NSError?) -> Void#>)
-        completion(error: nil)
-    }
+    static var restaurants: [Restaurant]?
     
-    static func someGetRequest(info: String, completion: (error: NSError?) -> Void) {
-        request(.GET, params: [APIKey.Info : info], router: .Endpoint) { data, error in
-            if error == nil {
-                print("Data: \(data)")
-            }
-            completion(error: error)
-        }
+    static func signIn(username: String, completion: (restaurants: [Restaurant]?, error: NSError?) -> Void) {
+        Network.restaurants = restaurants
+        completion(restaurants: nil, error: nil)
     }
     
     private static func request(method: Alamofire.Method, params: [String: AnyObject], router: Router, completion: (data: JSON?, error: NSError?) -> Void) {
@@ -96,8 +91,6 @@ class Network {
                 }
         }
     }
-    
-    
     
 }
 
