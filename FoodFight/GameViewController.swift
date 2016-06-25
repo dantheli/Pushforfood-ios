@@ -9,6 +9,10 @@
 import UIKit
 import SocketIOClientSwift
 
+let array = [
+    "deli", "salads", "cream", "fast", "mexican", "indian", "indian", "sushi"
+]
+
 class GameViewController: UIViewController {
 
     @IBOutlet var buttons: [UIButton]!
@@ -20,7 +24,14 @@ class GameViewController: UIViewController {
         didSet {
             countDownLabel.text = "\(countDown)"
             if countDown == 0 {
-                Network.play { restaurant in
+                var newDict: [String : Double] = [:]
+                let sum = Double(dict.values.reduce(0, combine: +))
+                for (key, value) in dict {
+                    newDict[key] = Double(value) / sum
+                }
+                print("newdict")
+                print(newDict)
+                Network.play(newDict) { restaurant in
                     if let restaurant = restaurant {
                         let vc = self.storyboard!.instantiateViewControllerWithIdentifier("PostGameViewController") as! PostGameViewController
                         vc.restaurant = restaurant
@@ -30,6 +41,9 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
+    var dict: [String : Int] = [:]
+    
     @IBOutlet weak var countDownLabel: UILabel!
     
     func setupSocket() {
@@ -41,6 +55,10 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for string in array {
+            dict[string] = 0
+        }
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(updateCountDown), userInfo: nil, repeats: true)
         timer.fire()
@@ -58,6 +76,7 @@ class GameViewController: UIViewController {
     
     func buttonPressed(button: UIButton) {
         animateButtonTap(atIndex: button.tag, withColor: UIColor.orangeColor())
+        dict[array[button.tag]]! += 1
     }
     
     override func viewWillLayoutSubviews() {

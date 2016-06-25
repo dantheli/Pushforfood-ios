@@ -373,7 +373,7 @@
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RJ-o7-yR4">
                                         <rect key="frame" x="214" y="8" width="97.5" height="97.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Button" image="glutenfree"/>
+                                        <state key="normal" title="Button" image="salads"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjc-X5-RND">
                                         <rect key="frame" x="8" y="8" width="97.5" height="97.5"/>
@@ -1007,12 +1007,12 @@
         <image name="check" width="64" height="64"/>
         <image name="deli" width="240" height="240"/>
         <image name="fastfood" width="240" height="240"/>
-        <image name="glutenfree" width="240" height="240"/>
         <image name="icecream" width="240" height="240"/>
         <image name="indian" width="240" height="240"/>
         <image name="mexican" width="240" height="240"/>
         <image name="noodles" width="240" height="240"/>
         <image name="restaurant" width="1140" height="680"/>
+        <image name="salads" width="240" height="240"/>
         <image name="sushi" width="240" height="240"/>
         <image name="transparent_logo" width="34" height="32"/>
         <image name="x" width="64" height="64"/>

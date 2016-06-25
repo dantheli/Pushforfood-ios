@@ -94,19 +94,14 @@ class Network {
         }
     }
     
-    static func play(completion: (restaurant: Restaurant?) -> Void) {
+    static func play(dict: [String : Double], completion: (restaurant: Restaurant?) -> Void) {
         let parameters: [String : AnyObject] = [
             "users" : [
                 ["name" : "joe"],
                 ["name" : "ilan"],
                 ["name" : "dan"]
             ],
-            "choices" : [
-                "chinese" : 0.6,
-                "indian" : 0.05,
-                "ice cream" : 0.1,
-                "fast food" : 0.25
-            ]
+            "choices" : dict
         ]
         request(.POST, params: parameters, router: .Play) { data, error in
             var restaurant: Restaurant? = nil
