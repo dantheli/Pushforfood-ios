@@ -20,6 +20,7 @@ class GameViewController: UIViewController {
         didSet {
             countDownLabel.text = "\(countDown)"
             if countDown == 0 {
+                Network.play()
                 navigationController?.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("PostGameViewController"), animated: true)
             }
         }

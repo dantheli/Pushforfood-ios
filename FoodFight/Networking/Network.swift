@@ -16,6 +16,7 @@ enum Router: URLStringConvertible {
     
     case UserCreate
     case UserAddPref
+    case Play
     
     static let BackendHostURL =     URL
     
@@ -26,6 +27,8 @@ enum Router: URLStringConvertible {
                 return "/users/create"
             case .UserAddPref:
                 return "/users/add_pref"
+            case .Play:
+                return "/choices/recommend"
             }
         }()
         return Router.BackendHostURL + path
@@ -88,6 +91,25 @@ class Network {
         ]
         request(.POST, params: parameters, router: .UserAddPref) { data, error in
             completion(error: error)
+        }
+    }
+    
+    static func play(completion: (restaurant: Restaurant?) -> Void) {
+        let parameters: [String : AnyObject] = [
+            "users" : [
+                ["name" : "joe"],
+                ["name" : "ilan"],
+                ["name" : "dan"]
+            ],
+            "choices" : [
+                ["chinese" : 0.6],
+                ["indian" : 0.05],
+                ["ice cream" : 0.1],
+                ["fast food" : 0.25]
+            ]
+        ]
+        request(.POST, params: parameters, router: .Play) { data, error in
+            completion(restaurant: data?["hi"])
         }
     }
     

@@ -303,7 +303,7 @@
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LW-TY-wSY">
                                         <rect key="frame" x="214" y="355" width="97.5" height="97.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Button" image="deli"/>
+                                        <state key="normal" title="Button" image="salads"/>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgt-75-0FF">
                                         <rect key="frame" x="8" y="355" width="97.5" height="97.5"/>
@@ -311,7 +311,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="qgt-75-0FF" secondAttribute="height" multiplier="1:1" id="q67-XZ-NCr"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="deli"/>
+                                        <state key="normal" title="Button" image="noodles"/>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUS-Ii-eyL">
                                         <rect key="frame" x="122" y="186" width="75" height="89.5"/>
@@ -350,7 +350,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="8bv-rM-97o" secondAttribute="height" multiplier="1:1" id="DKx-DT-m01"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="deli"/>
+                                        <state key="normal" title="Button" image="indian"/>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5h-KF-5Tr">
                                         <rect key="frame" x="214" y="182" width="97.5" height="97.5"/>
@@ -700,7 +700,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The more you tap, the more that preference counts towards the decision." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nF-WF-GbA">
-                                <rect key="frame" x="98" y="198.5" width="210" height="81.5"/>
+                                <rect key="frame" x="98" y="198" width="210" height="81.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -708,7 +708,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15F-S1-MOY">
                                 <rect key="frame" x="0.0" y="314" width="320" height="188"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QT3-jF-4di">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QT3-jF-4di">
                                         <rect key="frame" x="40" y="61" width="66" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66" id="8O4-Xr-AZc"/>
@@ -718,7 +718,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us6-gx-7nA">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us6-gx-7nA">
                                         <rect key="frame" x="98" y="61" width="66" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66" id="71n-rd-H0k"/>
@@ -728,17 +728,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-cw-2UO">
-                                        <rect key="frame" x="156" y="61" width="66" height="66"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="66" id="0ed-aa-Ozh"/>
-                                            <constraint firstAttribute="height" constant="66" id="p6h-jy-kCq"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-4n-8FV">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eddie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-4n-8FV">
                                         <rect key="frame" x="214" y="61" width="66" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="66" id="ILR-I5-aVB"/>
@@ -778,6 +768,16 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ilan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-cw-2UO">
+                                        <rect key="frame" x="156" y="61" width="66" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="0ed-aa-Ozh"/>
+                                            <constraint firstAttribute="height" constant="66" id="p6h-jy-kCq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -805,7 +805,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tap icon" translatesAutoresizingMaskIntoConstraints="NO" id="zfj-h8-D4N">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Tap icon" translatesAutoresizingMaskIntoConstraints="NO" id="zfj-h8-D4N">
                                 <rect key="frame" x="24" y="211" width="58" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="S55-rR-KoQ"/>
@@ -1009,8 +1009,11 @@
         <image name="fastfood" width="240" height="240"/>
         <image name="glutenfree" width="240" height="240"/>
         <image name="icecream" width="240" height="240"/>
+        <image name="indian" width="240" height="240"/>
         <image name="mexican" width="240" height="240"/>
+        <image name="noodles" width="240" height="240"/>
         <image name="restaurant" width="1140" height="680"/>
+        <image name="salads" width="240" height="240"/>
         <image name="transparent_logo" width="34" height="32"/>
         <image name="x" width="64" height="64"/>
     </resources>
