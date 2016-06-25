@@ -23,6 +23,8 @@
 		65FCDFEB1D1E353800BF9AC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFEA1D1E353800BF9AC8 /* Constants.swift */; };
 		65FCDFED1D1E651400BF9AC8 /* PrepareGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFEC1D1E651400BF9AC8 /* PrepareGameViewController.swift */; };
 		65FCDFF01D1EB79A00BF9AC8 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFEF1D1EB79A00BF9AC8 /* GamesViewController.swift */; };
+		65FCDFF21D1EBBBB00BF9AC8 /* PostGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFF11D1EBBBB00BF9AC8 /* PostGameViewController.swift */; };
+		65FCDFF41D1EBC0500BF9AC8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFF31D1EBC0500BF9AC8 /* OnboardingViewController.swift */; };
 		EA2B5C86387DFC7CD2C24921 /* Pods_FoodFight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F697996F421B2A325636472 /* Pods_FoodFight.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		65FCDFEA1D1E353800BF9AC8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		65FCDFEC1D1E651400BF9AC8 /* PrepareGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareGameViewController.swift; sourceTree = "<group>"; };
 		65FCDFEF1D1EB79A00BF9AC8 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		65FCDFF11D1EBBBB00BF9AC8 /* PostGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostGameViewController.swift; sourceTree = "<group>"; };
+		65FCDFF31D1EBC0500BF9AC8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		9F697996F421B2A325636472 /* Pods_FoodFight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D743822E349A86CE20616996 /* Pods-FoodFight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFight.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodFight/Pods-FoodFight.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,8 +99,8 @@
 				65858EAD1D1E267E00C6460F /* Application */,
 				65858EAE1D1E268900C6460F /* Login */,
 				65858EB01D1E284500C6460F /* Contacts View */,
-				65FCDFE61D1E2DF900BF9AC8 /* Game */,
 				65FCDFEE1D1EB78C00BF9AC8 /* Games */,
+				65FCDFE61D1E2DF900BF9AC8 /* Game */,
 				65858EA41D1E227400C6460F /* Model */,
 				65858EAF1D1E268E00C6460F /* Networking */,
 				65FCDFE71D1E2E0300BF9AC8 /* Extras */,
@@ -157,6 +161,7 @@
 			children = (
 				65FCDFEC1D1E651400BF9AC8 /* PrepareGameViewController.swift */,
 				65858EA21D1E214B00C6460F /* GameViewController.swift */,
+				65FCDFF11D1EBBBB00BF9AC8 /* PostGameViewController.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 		65FCDFEE1D1EB78C00BF9AC8 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				65FCDFF31D1EBC0500BF9AC8 /* OnboardingViewController.swift */,
 				65FCDFEF1D1EB79A00BF9AC8 /* GamesViewController.swift */,
 			);
 			name = Games;
@@ -325,10 +331,12 @@
 				65858EA31D1E214B00C6460F /* GameViewController.swift in Sources */,
 				65FCDFF01D1EB79A00BF9AC8 /* GamesViewController.swift in Sources */,
 				65858EA11D1E211500C6460F /* LoginViewController.swift in Sources */,
+				65FCDFF21D1EBBBB00BF9AC8 /* PostGameViewController.swift in Sources */,
 				65858EA61D1E228D00C6460F /* User.swift in Sources */,
 				65FCDFEB1D1E353800BF9AC8 /* Constants.swift in Sources */,
 				65858E8F1D1E042900C6460F /* ContactsViewController.swift in Sources */,
 				65858E8D1D1E042900C6460F /* AppDelegate.swift in Sources */,
+				65FCDFF41D1EBC0500BF9AC8 /* OnboardingViewController.swift in Sources */,
 				65858E9F1D1E1CA000C6460F /* Network.swift in Sources */,
 				65858EA81D1E22C700C6460F /* Sockets.swift in Sources */,
 			);

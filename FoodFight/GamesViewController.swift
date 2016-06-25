@@ -21,6 +21,11 @@ class GamesViewController: UIViewController {
         setupTableView()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+    }
+    
     func setupTableView() {
         tableView = UITableView(frame: view.frame, style: .Plain)
         

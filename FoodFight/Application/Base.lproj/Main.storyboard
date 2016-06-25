@@ -88,7 +88,7 @@
                                     <constraint firstAttribute="height" constant="44" id="Mum-W1-QZm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -111,7 +111,7 @@
                                     <constraint firstAttribute="height" constant="44" id="aTK-2x-NHQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" red="0.92475867150000002" green="0.62150374620000004" blue="0.2117165063" alpha="1" colorSpace="calibratedRGB"/>
@@ -133,7 +133,7 @@
                                     <constraint firstAttribute="height" constant="44" id="h2E-iM-rGy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -395,7 +395,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Md-g8-Mx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1892" y="303"/>
+            <point key="canvasLocation" x="1686" y="303"/>
         </scene>
         <!--Prepare Game View Controller-->
         <scene sceneID="efy-8b-ghf">
@@ -583,7 +583,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9f-r2-vwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478" y="303"/>
+            <point key="canvasLocation" x="1318" y="303"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Atc-HM-6sy">
@@ -622,7 +622,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oS1-ev-NuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1229" y="1261"/>
+            <point key="canvasLocation" x="1294" y="1261"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="kQK-DX-OpK">
+            <objects>
+                <viewController id="SPM-iz-BgG" customClass="OnboardingViewController" customModule="FoodFight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KaO-iK-xsd"/>
+                        <viewControllerLayoutGuide type="bottom" id="ydu-bI-hdt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kgS-JD-zUm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tn9-Gm-bm0" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="16" y="187.5" width="288" height="364.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kZ-9D-i2Q">
+                                <rect key="frame" x="38" y="42" width="244" height="101.5"/>
+                                <string key="text">We'd like to know about your general eating preferences so that we can give you better suggestions. You only have to do this once!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3kZ-9D-i2Q" secondAttribute="trailing" constant="22" id="3Yv-mD-p1X"/>
+                            <constraint firstItem="Tn9-Gm-bm0" firstAttribute="top" secondItem="3kZ-9D-i2Q" secondAttribute="bottom" constant="44" id="81Y-Z6-Qpe"/>
+                            <constraint firstItem="ydu-bI-hdt" firstAttribute="top" secondItem="Tn9-Gm-bm0" secondAttribute="bottom" constant="16" id="DRZ-7T-QXw"/>
+                            <constraint firstItem="3kZ-9D-i2Q" firstAttribute="leading" secondItem="kgS-JD-zUm" secondAttribute="leadingMargin" constant="22" id="G8Q-X7-FV4"/>
+                            <constraint firstItem="Tn9-Gm-bm0" firstAttribute="leading" secondItem="kgS-JD-zUm" secondAttribute="leading" constant="16" id="Ntj-Pf-JCv"/>
+                            <constraint firstAttribute="trailing" secondItem="Tn9-Gm-bm0" secondAttribute="trailing" constant="16" id="X5T-ET-iZd"/>
+                            <constraint firstItem="3kZ-9D-i2Q" firstAttribute="top" secondItem="KaO-iK-xsd" secondAttribute="bottom" constant="22" id="buP-nY-IvM"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33i-0N-fdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="1018"/>
         </scene>
         <!--NEW FIGHT-->
         <scene sceneID="9a2-qu-djA">

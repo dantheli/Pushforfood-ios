@@ -17,6 +17,7 @@ class ContactsViewController: UIViewController {
     @IBAction func createButtonPressed(sender: UIButton) {
         navigationController?.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("PrepareGameViewController"), animated: true)
     }
+    
     @IBOutlet weak var firstField: HoshiTextField!
     @IBOutlet weak var secondField: HoshiTextField!
     @IBOutlet weak var thirdField: HoshiTextField!
@@ -31,6 +32,7 @@ class ContactsViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.whiteColor()
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:))))
         
         navigationController?.setTheme()
         
@@ -46,6 +48,12 @@ class ContactsViewController: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+    
+    func viewTapped(gesture: UITapGestureRecognizer) {
+        if !firstField.frame.contains(gesture.locationInView(view)) && !secondField.frame.contains(gesture.locationInView(view)) && !thirdField.frame.contains(gesture.locationInView(view)) {
+            view.endEditing(true)
+        }
     }
     
     func setupData() {
