@@ -8,6 +8,7 @@
 
 import UIKit
 import TextFieldEffects
+import SocketIOClientSwift
 
 class FiltersViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class FiltersViewController: UIViewController {
             tableView.fadeHide()
             currentResponder = .None
         } else {
+            query(sender.text!)
             tableView.fadeShow()
             tableView.frame = CGRect(x: sender.frame.origin.x, y: sender.frame.maxY - 4.0, width: sender.frame.width, height: 220.0)
             currentResponder = .First
@@ -26,12 +28,15 @@ class FiltersViewController: UIViewController {
     }
     @IBOutlet weak var secondField: HoshiTextField!
     @IBAction func secondFieldChanged(sender: HoshiTextField) {
+//        results = ["Hawaiian", "Handicap Parking", "Halal"]
+        tableView.reloadData()
         view.bringSubviewToFront(tableView)
         view.bringSubviewToFront(secondField)
         if sender.text?.isEmpty ?? true {
             tableView.fadeHide()
             currentResponder = .None
         } else {
+            query(sender.text!)
             tableView.fadeShow()
             tableView.frame = CGRect(x: sender.frame.origin.x, y: sender.frame.maxY - 4.0, width: sender.frame.width, height: 220.0)
             currentResponder = .Second
@@ -43,9 +48,10 @@ class FiltersViewController: UIViewController {
         navigationController?.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("PrepareGameViewController"), animated: true)
     }
     
+    var socket: SocketIOClient!
     
     var tableView: UITableView!
-    var results: [String] = ["Jamaican", "Japanese", "Jack's Burgers"]
+    var results: [String] = []
     
     enum Responder {
         case None
@@ -66,8 +72,22 @@ class FiltersViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
+        socket = SocketIOClient(socketURL: NSURL(string: URL)!, options: [.Nsp("/main")])
+        socket.on("query-results") { event in
+            if let array = event.0.first as? [String] {
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.results = array
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        socket.connect()
         
         setupTableView()
+    }
+    
+    func query(query: String) {
+        socket.emit("query", query)
     }
     
     func setupTableView() {

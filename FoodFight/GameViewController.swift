@@ -15,6 +15,16 @@ class GameViewController: UIViewController {
     @IBOutlet weak var buttonsContainer: UIView!
     
     var socket: SocketIOClient!
+    var timer: NSTimer!
+    var countDown = 15 {
+        didSet {
+            countDownLabel.text = "\(countDown)"
+            if countDown == 0 {
+                navigationController?.pushViewController(storyboard!.instantiateViewControllerWithIdentifier("PostGameViewController"), animated: true)
+            }
+        }
+    }
+    @IBOutlet weak var countDownLabel: UILabel!
     
     func setupSocket() {
         socket = SocketIOClient(socketURL: NSURL(string: "")!)
@@ -26,12 +36,18 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(updateCountDown), userInfo: nil, repeats: true)
+        timer.fire()
         for button in buttons {
             button.addTarget(self, action: #selector(buttonPressed(_:)), forControlEvents: .TouchDown)
             button.adjustsImageWhenHighlighted = false
         }
         
         navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    func updateCountDown() {
+        countDown -= 1
     }
     
     func buttonPressed(button: UIButton) {

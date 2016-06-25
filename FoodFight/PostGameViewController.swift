@@ -22,7 +22,7 @@ class PostGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        played = true
     }
     
     func updateInfo(name: String, cuisine: String, address: String, phone: String, imageURL: String) {

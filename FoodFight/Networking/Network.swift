@@ -10,17 +10,22 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
+var URL = "http://10.0.31.14:5000"
+
 enum Router: URLStringConvertible {
     
-    case Endpoint
+    case UserCreate
+    case UserAddPref
     
-    static let BackendHostURL =     "https://localhost/api/v1"
+    static let BackendHostURL =     URL
     
     var URLString: String {
         let path: String = {
             switch self {
-            case .Endpoint:
-                return "/endpoint"
+            case .UserCreate:
+                return "/users/create"
+            case .UserAddPref:
+                return "/users/add_pref"
             }
         }()
         return Router.BackendHostURL + path
@@ -45,7 +50,6 @@ var SessionCode: String? {
 }
 
 
-
 /**
  
  The NetworkManager class makes HTTP requests to the backend server.
@@ -53,15 +57,42 @@ var SessionCode: String? {
  */
 class Network {
     
+    static var name: String = ""
+    
     static var restaurants: [Restaurant]?
     
-    static func signIn(username: String, completion: (restaurants: [Restaurant]?, error: NSError?) -> Void) {
-        Network.restaurants = restaurants
-        completion(restaurants: nil, error: nil)
+    static func signIn(name: String, email: String, completion: (error: NSError?) -> Void) {
+        let parameters: [String : AnyObject] = [
+            "user" : [
+                "name" : name,
+                "email" : email
+            ]
+        ]
+        request(.POST, params: parameters, router: .UserCreate) { data, error in
+            let restaurants = data?["training_data"].array?.map { Restaurant(json: $0) }
+            self.name = name
+            self.restaurants = restaurants
+            completion(error: error)
+        }
     }
     
-    private static func request(method: Alamofire.Method, params: [String: AnyObject], router: Router, completion: (data: JSON?, error: NSError?) -> Void) {
-        Alamofire.request(method, router, parameters: params)
+    static func userPrefs(choice: Bool, index: Int, completion: (error: NSError?) -> Void) {
+        let parameters: [String : AnyObject] = [
+            "user" : [
+                "name" : name
+            ],
+            "pref" : [
+                "prefer" : choice,
+                "business_id" : restaurants![index].id
+            ]
+        ]
+        request(.POST, params: parameters, router: .UserAddPref) { data, error in
+            completion(error: error)
+        }
+    }
+    
+    private static func request(method: Alamofire.Method, params: [String: AnyObject], router: Router, encoding: ParameterEncoding = .JSON, completion: (data: JSON?, error: NSError?) -> Void) {
+        Alamofire.request(method, router, encoding: encoding, parameters: params)
             .responseJSON { response in
                 print()
                 print("**************************************** NEW REQUEST *************************************")
@@ -83,12 +114,7 @@ class Network {
                 print()
                 print(json)
                 
-                if json[APIKey.Success].bool! {
-                    completion(data: json[APIKey.Data], error: nil)
-                } else {
-                    let error = json[APIKey.Data][APIKey.Errors].array?.first?.string
-                    completion(data: nil, error: NSError(domain: "Domain", code: -999999, userInfo: [kCFErrorLocalizedDescriptionKey : error ?? "Unknown Error"]))
-                }
+                completion(data: json, error: nil)
         }
     }
     

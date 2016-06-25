@@ -22,6 +22,8 @@ class OnboardingViewController: UIViewController {
         kolodaView.swipe(.Right)
     }
     
+    var choices: [Bool] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,8 +59,14 @@ extension OnboardingViewController: KolodaViewDataSource, KolodaViewDelegate {
     }
     
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
-        let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width - 32.0, height: 260.0))
-        view.backgroundColor = UIColor.lightGrayColor()
+        let restaurants = Network.restaurants ?? []
+        let restaurant = restaurants[Int(index)]
+        
+        let view = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width - 32.0, height: 260.0))
+        view.image = UIImage(named: "restaurant")
+        let blackView = UIView(frame: view.frame)
+        blackView.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+        view.addSubview(blackView)
         let subtitleLabel = UILabel(frame: CGRect(x: 8.0, y: view.frame.height - 21.0, width: view.frame.width, height: 21.0))
         subtitleLabel.text = "American"
         subtitleLabel.textColor = UIColor(white: 1.0, alpha: 0.8)
@@ -66,15 +74,22 @@ extension OnboardingViewController: KolodaViewDataSource, KolodaViewDelegate {
         view.addSubview(subtitleLabel)
         
         let titleLabel = UILabel(frame: CGRect(x: 8.0, y: subtitleLabel.frame.minY - 36.0, width: view.frame.width, height: 36.0))
-        titleLabel.text = "Sportello Restaurant"
+        titleLabel.text = restaurant.name
         titleLabel.textColor = UIColor.whiteColor()
         titleLabel.font = UIFont.boldSystemFontOfSize(24.0)
         view.addSubview(titleLabel)
+        
+        
         
         return view
     }
     
     func koloda(koloda: KolodaView, didSwipeCardAtIndex index: UInt, inDirection direction: SwipeResultDirection) {
+        Network.userPrefs(direction == .Right || direction == .BottomRight || direction == .TopRight, index: Int(index)) { error in
+            if let error = error {
+                self.displayError(error, completion: nil)
+            }
+        }
     }
     
     func kolodaDidRunOutOfCards(koloda: KolodaView) {

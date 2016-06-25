@@ -26,6 +26,7 @@
 		65FCDFF41D1EBC0500BF9AC8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFF31D1EBC0500BF9AC8 /* OnboardingViewController.swift */; };
 		65FCDFF61D1EDA4B00BF9AC8 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFF51D1EDA4B00BF9AC8 /* FiltersViewController.swift */; };
 		65FCDFFA1D1EF8C300BF9AC8 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFF91D1EF8C300BF9AC8 /* Restaurant.swift */; };
+		65FCDFFC1D1EFD4B00BF9AC8 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FCDFFB1D1EFD4B00BF9AC8 /* FeedbackViewController.swift */; };
 		EA2B5C86387DFC7CD2C24921 /* Pods_FoodFight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F697996F421B2A325636472 /* Pods_FoodFight.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		65FCDFF31D1EBC0500BF9AC8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = ../OnboardingViewController.swift; sourceTree = "<group>"; };
 		65FCDFF51D1EDA4B00BF9AC8 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		65FCDFF91D1EF8C300BF9AC8 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		65FCDFFB1D1EFD4B00BF9AC8 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		9F697996F421B2A325636472 /* Pods_FoodFight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodFight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D743822E349A86CE20616996 /* Pods-FoodFight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodFight.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodFight/Pods-FoodFight.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +168,7 @@
 				65FCDFEC1D1E651400BF9AC8 /* PrepareGameViewController.swift */,
 				65858EA21D1E214B00C6460F /* GameViewController.swift */,
 				65FCDFF11D1EBBBB00BF9AC8 /* PostGameViewController.swift */,
+				65FCDFFB1D1EFD4B00BF9AC8 /* FeedbackViewController.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				65FCDFF21D1EBBBB00BF9AC8 /* PostGameViewController.swift in Sources */,
 				65858EA61D1E228D00C6460F /* User.swift in Sources */,
 				65FCDFEB1D1E353800BF9AC8 /* Constants.swift in Sources */,
+				65FCDFFC1D1EFD4B00BF9AC8 /* FeedbackViewController.swift in Sources */,
 				65858E8F1D1E042900C6460F /* ContactsViewController.swift in Sources */,
 				65858E8D1D1E042900C6460F /* AppDelegate.swift in Sources */,
 				65FCDFF41D1EBC0500BF9AC8 /* OnboardingViewController.swift in Sources */,
