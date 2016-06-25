@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import TextFieldEffects
 
 class ContactsViewController: UIViewController {
 
-    var emptyLabel: UILabel!
+    var infoLabel: UILabel!
     var tableView: UITableView!
     var users: [User] = [
         User(name: "Ilan Filonenko", email: "ilan@ilanfilonenko.com"),
@@ -23,42 +24,18 @@ class ContactsViewController: UIViewController {
         
         view.backgroundColor = UIColor.whiteColor()
         
-        navigationController?.navigationBar.barTintColor = UIColor.foodOrange()
+        navigationController?.setTheme()
         
         title = "FoodFight"
         
         setupData()
-        setupTableView()
-        setupEmptyLabel()
+        
         OneSignal.defaultClient().registerForPushNotifications()
     }
     
     func setupData() {
         
     }
-    
-    func setupTableView() {
-        tableView = UITableView(frame: view.frame, style: .Plain)
-        tableView.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        tableView.registerNib(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "UserCell")
-        
-        tableView.alpha = 0.0
-        
-        view.addSubview(tableView)
-    }
-    
-    func setupEmptyLabel() {
-        emptyLabel = UILabel()
-        emptyLabel.text = "No contacts!"
-        emptyLabel.font = UIFont.systemFontOfSize(14.0)
-        emptyLabel.sizeToFit()
-        emptyLabel.center = view.center
-        view.addSubview(emptyLabel)
-    }
-    
 }
 
 extension ContactsViewController: UITableViewDataSource, UITableViewDelegate {

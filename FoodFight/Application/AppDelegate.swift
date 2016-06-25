@@ -20,12 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         _ = OneSignal(launchOptions: launchOptions, appId: OneSignalAppId, handleNotification: nil, autoRegister: false)
         
-        OneSignal.defaultClient().enableInAppAlertNotification(true)
-        
-        OneSignal.defaultClient().IdsAvailable { userId, pushToken in
-            print(userId)
-        }
-        
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         

@@ -48,5 +48,99 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="7Dh-ud-QLV">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IY0-9z-kKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="vPc-Gt-emI" customClass="ContactsViewController" customModule="FoodFight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q86-H0-Ra1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Foa-Tp-LzG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s5N-c9-2P8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FFh-aR-2Yx" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="60" y="201" width="200" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Mum-W1-QZm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgw-bg-rDh">
+                                <rect key="frame" x="145" y="56" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DIN-su-76z" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="60" y="289" width="200" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="h2E-iM-rGy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rua-lD-TKw" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="60" y="113" width="200" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aTK-2x-NHQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" red="0.90196078431372551" green="0.49411764705882355" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rua-lD-TKw" firstAttribute="top" secondItem="cgw-bg-rDh" secondAttribute="bottom" constant="36" id="0F9-q7-wn8"/>
+                            <constraint firstItem="rua-lD-TKw" firstAttribute="leading" secondItem="s5N-c9-2P8" secondAttribute="leadingMargin" constant="44" id="4Be-bM-TwY"/>
+                            <constraint firstItem="FFh-aR-2Yx" firstAttribute="leading" secondItem="s5N-c9-2P8" secondAttribute="leadingMargin" constant="44" id="5JR-zt-N00"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DIN-su-76z" secondAttribute="trailing" constant="44" id="8MR-zQ-u2j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FFh-aR-2Yx" secondAttribute="trailing" constant="44" id="LIg-dZ-PQm"/>
+                            <constraint firstItem="cgw-bg-rDh" firstAttribute="centerX" secondItem="s5N-c9-2P8" secondAttribute="centerX" id="Meq-iq-Aat"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rua-lD-TKw" secondAttribute="trailing" constant="44" id="PLs-ZN-Nfw"/>
+                            <constraint firstItem="DIN-su-76z" firstAttribute="leading" secondItem="s5N-c9-2P8" secondAttribute="leadingMargin" constant="44" id="foG-hj-N4u"/>
+                            <constraint firstItem="DIN-su-76z" firstAttribute="top" secondItem="FFh-aR-2Yx" secondAttribute="bottom" constant="44" id="hNC-Mc-mpy"/>
+                            <constraint firstItem="FFh-aR-2Yx" firstAttribute="top" secondItem="rua-lD-TKw" secondAttribute="bottom" constant="44" id="t0O-PA-TgF"/>
+                            <constraint firstItem="cgw-bg-rDh" firstAttribute="top" secondItem="Q86-H0-Ra1" secondAttribute="bottom" constant="36" id="ysq-YL-z14"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="864" y="309"/>
+        </scene>
     </scenes>
 </document>
